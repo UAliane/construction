@@ -1,0 +1,296 @@
+body{
+    background-color: #ffffff;
+    font-family: Verdana, sans-serif;
+}
+.navbar{
+    width: 100%;
+}
+.white{
+   display: flex;
+   justify-content: flex-start;
+   background-color: #ffffff;
+   
+}   
+.white p{
+   margin-left:2rem ;
+   color: rgb(0, 0, 0);
+}
+.blue{
+    background-color: rgb(0, 140, 255);
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    height: 4rem;
+    width: 6rem;
+    object-fit: cover;
+    margin-top:15px;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin-left: 2rem;
+}
+.navigation{
+    margin: 2rem;
+}
+input{
+    height: 2rem;
+    width: 12rem;
+    margin: 1rem;
+    background-color: transparent;
+    border-color: transparent;
+    
+}
+.container{
+   position: relative; 
+   height: 100vh;
+   width: 100%;
+   margin-top: -1rem;
+   background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329104/WhatsApp_Image_2025-08-29_at_6.05.44_PM_1_zsknub.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   animation: Bgchange 20s liner infinite;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0 , 0, 0, 0.3);
+}
+@keyframes Bgchange{
+    0%{
+       background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329104/WhatsApp_Image_2025-08-29_at_6.05.44_PM_1_zsknub.jpg');
+    }
+    20%{
+       background-image:url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329223/WhatsApp_Image_2025-08-29_at_6.05.53_PM_mr8ync.jpg');
+    }
+    25%{
+       background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329220/WhatsApp_Image_2025-08-29_at_6.05.51_PM_mnmxno.jpg');
+    }
+    45%{
+       background-image:url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757328626/WhatsApp_Image_2025-08-29_at_6.05.48_PM_djlaeb.jpg');
+    }
+    50%{
+       background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329342/WhatsApp_Image_2025-08-29_at_6.05.50_PM_zn7hyk.jpg');
+    }
+    70%{
+       background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757328626/WhatsApp_Image_2025-08-29_at_6.05.42_PM_z0zvci.jpg'); 
+    }
+    75%{
+       background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329220/WhatsApp_Image_2025-08-29_at_6.05.52_PM_ekfxog.jpg');
+    }
+    95%{
+      background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329223/WhatsApp_Image_2025-08-29_at_6.05.53_PM_mr8ync.jpg'); 
+    }
+    
+}
+.content{
+    width: 100%;
+    padding-top: 10rem;
+    
+}
+.content h1{
+    font-size: 4rem;
+    color: rgb(255, 255, 255);
+    margin-left:4rem ;
+}
+.content h3{
+    font-size:2rem;
+    color: rgb(0, 140, 255);
+    margin-left: 4rem;
+}
+.content p{
+    margin: 5rem 4rem;
+    color: #ffffff;
+    text-transform: bold;
+    
+}
+.move{
+    background-color: #ffffff;
+    height: 4rem;
+}
+.move ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+.move ul li{
+    font-size: 13px;
+}
+.unique{
+    background-color: #ffffff;
+    height: 30rem;
+    width: 100%;
+
+}
+.combine{
+    display: flex;
+    justify-content:space-between ;
+    border: #b3acac;
+    border-color: 5px solid #b3acac;
+    height: 95%;
+    width: 95%;
+    margin: 2rem;
+}
+.photo{
+    width: 50%;
+    height: 100%;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.discription{
+   margin: 3rem;
+}
+.discription h1{
+  margin-bottom: 2rem;
+}
+
+.head{
+    background-color: #000;
+    text-align: center ;
+    color: #ffffff;
+    height: 10rem;
+}
+.head h1{
+    padding-top: 3rem;
+    font-size: 3rem;
+}
+.one{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+
+}
+.architect{
+    width: 50%;
+}
+.pink{
+    width: 50%;
+    margin: 5rem 5rem 5rem 10rem;
+}
+.pink h1{
+   font-size: 2rem;
+}
+.architect img{
+    width: 100%;
+    height: 30rem;
+    border-bottom-right-radius:2rem ;
+    border-top-left-radius: 2rem;
+}
+button{
+    height: 2rem;
+    width: 10rem;
+    margin-top: 2rem;
+    border-color: transparent;
+    background-color: transparent;
+}
+.why{
+    background-color: #000;
+    color: #ffffff;
+}
+.fine{
+    display: flex;
+    justify-content:space-around ;
+}
+.fine h1{
+   font-size: 6rem;
+}
+.fine p{
+    margin-top: 5rem;
+    line-height: 2rem;
+}
+.win{
+    display: flex;
+    justify-content:space-around ;
+    border:1px solid  #b3acac;
+    text-align: center;
+    height: 25rem;
+}
+.une{
+    margin-top:10rem ;
+}
+.une h1{
+   font-size: 25px;
+}
+.une p{
+    font-size: 14px;
+    line-height: 20px;
+    
+}
+.line{
+    height: 15rem;
+    width: 1px;
+    background-color: #b3acac;
+    margin-top: 5rem;
+}
+.more{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+.more button{
+    background-color: rgb(0, 0, 0);
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 15px;
+}
+.more p{
+    margin-top: 2.5rem;
+}
+.percent{
+    height: 70vh;
+    width: 100%;
+    background-image:url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757328679/WhatsApp_Image_2025-08-29_at_6.05.47_PM_1_m01swn.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+.circle{
+    height:25rem ;
+    width:25rem ;
+    border-radius: 50%;
+    border: 1px solid  #ffffff;
+    text-align: center;
+    margin-top: 11rem;
+    color: #ffffff;
+}
+.circle h1{
+   margin-top: 30%;
+   font-size: 3rem;
+}
+.circle p{
+    font-size: 1rem;
+}
+.apartment{
+    background-color: #ffffff;
+}
+.apartment ul{
+   display: flex;
+   justify-content:center;
+}
+.apartment li{
+   margin: 3rem;
+   text-decoration: none;
+   font-size: 15px;
+}
+.fristly{
+    height: 30vh;
+    width: 30%;
+    background-image:url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757328679/WhatsApp_Image_2025-08-29_at_6.05.47_PM_1_m01swn.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
