@@ -285,12 +285,43 @@ button{
    text-decoration: none;
    font-size: 15px;
 }
-.fristly{
-    height: 30vh;
-    width: 30%;
-    background-image:url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757328679/WhatsApp_Image_2025-08-29_at_6.05.47_PM_1_m01swn.jpg') ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+
+.host{
+    display: flex;
 
 }
+.host{
+   height: 500px; 
+   margin: 50px;
+   box-shadow: 5px 5px 20px black;
+   overflow: hidden;
+}
+.holy img{
+    height: 500px;
+    width: 350px;
+    border-radius: 3px;
+}
+.holand{
+    height: 70px;
+    width: 350px;
+    padding: 6px;
+    position: absolute;
+    bottom: 240px;
+    background: rgb(27, 27, 27);
+    color: #ffffff;
+}
+.holand p{
+    margin: 20px;
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+.holand:hover{
+   cursor: pointer;
+}
+.holand:hover .holand{
+    height: 220px;
+    bottom: 240px;
+    background: black;
+}
+
