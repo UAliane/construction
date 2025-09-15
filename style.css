@@ -325,3 +325,197 @@ button{
     background: black;
 }
 
+/* ---------- MOBILE VIEW ---------- */
+@media (max-width: 768px) {
+
+    /* Top white bar */
+    .white {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .white p {
+      margin: 0.3rem 0;
+    }
+  
+    /* Navbar */
+    .blue {
+      flex-direction: column;
+      height: auto;
+      padding: 1rem;
+      text-align: center;
+    }
+    .navigation ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0;
+      margin: 1rem 0;
+    }
+    .navigation a {
+      margin: 0;
+      font-size: 1rem;
+    }
+    input {
+      width: 90%;
+      margin: 0.5rem auto;
+      display: block;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      padding: 0.5rem;
+      color: #fff;
+    }
+  
+    /* Hero text */
+    .content h1 {
+      font-size: 2rem;
+      margin-left: 1rem;
+    }
+    .content h3 {
+      font-size: 1.2rem;
+      margin-left: 1rem;
+    }
+    .content p {
+      margin: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+  
+    /* Move section */
+    .move ul {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+      margin: 1rem 0;
+    }
+  
+    /* Unique section */
+    .combine {
+      flex-direction: column;
+      margin: 1rem;
+    }
+    .photo,
+    .discription {
+      width: 100%;
+    }
+    .discription {
+      margin: 1rem;
+    }
+  
+    /* Services cards */
+    .one {
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+    .architect, .pink {
+      width: 100%;
+      margin: 0;
+    }
+    .architect img {
+      height: auto;
+    }
+  
+    /* Why Us */
+    .fine {
+      flex-direction: column;
+      text-align: center;
+    }
+    .win {
+      flex-direction: column;
+      height: auto;
+      padding: 2rem 1rem;
+    }
+    .line {
+      display: none;
+    }
+    .une {
+      margin: 2rem 0;
+    }
+  
+    /* Percent section */
+    .percent {
+      flex-direction: column;
+      height: auto;
+      padding: 2rem 0;
+      gap: 2rem;
+    }
+    .circle {
+      width: 12rem;
+      height: 12rem;
+      margin: 0 auto;
+    }
+  
+    /* Projects */
+    .apartment ul {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0;
+    }
+    .host {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      margin: 1rem 0;
+    }
+    .holy img {
+      width: 100%;
+      height: auto;
+    }
+    .holand {
+      position: static;
+      width: 100%;
+      height: auto;
+    }
+    .holand p {
+      visibility: visible;
+      opacity: 1;
+      font-size: 1rem;
+    }
+  }
+
+  /* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin: 1rem;
+  }
+  
+  /* Hide menu by default on small screens */
+  #nav-menu {
+    display: flex;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    #nav-menu {
+      display: none;
+      flex-direction: column;
+      background-color: rgb(0, 140, 255);
+      width: 100%;
+      padding: 1rem 0;
+    }
+  
+    #nav-menu.active {
+      display: flex;
+    }
+  
+    .navigation ul {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+  
+    .navigation a {
+      font-size: 1.2rem;
+      display: block;
+      padding: 0.5rem 0;
+    }
+  }
+  
+  

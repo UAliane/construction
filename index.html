@@ -15,19 +15,26 @@
             <p>+250 788435371</p>
         </div>
         <div class="blue">
-            <div class="logo">
-                <img src="https://res.cloudinary.com/dbtchmsoy/image/upload/v1757328578/WhatsApp_Image_2025-08-29_at_6.03.31_PM_vdpdmm.jpg" alt=""/>
-            </div>
-            <div class="navigation">
-                <ul>
-                  <a href="">Home</a>
-                  <a href="">About hashhive</a>
-                  <a href="">Our serivice</a>
-                  <a href="">Our worker</a>
-                  <a href="">Contact us</a>
-                </ul>
-            </div>
-            <input type="search" class="input" placeholder="search here ...">
+          <div class="logo">
+              <img src="https://res.cloudinary.com/dbtchmsoy/image/upload/v1757328578/WhatsApp_Image_2025-08-29_at_6.03.31_PM_vdpdmm.jpg" alt=""/>
+          </div>
+        
+          <!-- Hamburger Button -->
+          <div class="hamburger" onclick="toggleMenu()">
+              ☰
+          </div>
+        
+          <div class="navigation" id="nav-menu">
+              <ul>
+                <a href="">Home</a>
+                <a href="">About hashhive</a>
+                <a href="">Our service</a>
+                <a href="">Our worker</a>
+                <a href="">Contact us</a>
+              </ul>
+          </div>
+        
+          <input type="search" class="input" placeholder="search here ...">
         </div>
             
     </div>
@@ -267,6 +274,11 @@
         </div>
       </div>
     </div>
+    <script>
+      function toggleMenu() {
+        document.getElementById("nav-menu").classList.toggle("active");
+      }
+    </script>
 
 </body>
 </html>
