@@ -150,6 +150,7 @@ input{
 }
 .discription{
    margin: 3rem;
+   width: 50%;
 }
 .discription h1{
   margin-bottom: 2rem;
@@ -257,6 +258,44 @@ button{
     display: flex;
     justify-content: space-around;
 }
+.work{
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  height: 45rem;
+}
+.hash{
+  height: 23rem;
+  width: 23rem;
+  background-color: #000;
+  color: #ffffff;
+  text-align: center;
+  margin: 8rem 0 0 0;
+}
+.hash p{
+  margin: 10px;
+}
+.residential{
+  height: 28rem;
+  width: 25rem;
+  background-color: #da990db8;
+  color: #000000;
+  margin: 5rem 0 0 0;
+}
+.residential p{
+  margin: 20px;
+}
+.hive{
+  height: 23rem;
+  width: 23rem;
+  background-color: #000000;
+  color: #ffffff;
+  margin: 8rem 0 0 0;
+  text-align: center;
+}
+.hive p{
+  margin: 10px;
+}
 .circle{
     height:25rem ;
     width:25rem ;
@@ -285,30 +324,112 @@ button{
    text-decoration: none;
    font-size: 15px;
 }
-.last{
+.firstly{
+  display: flex;
+  justify-content: end;
+}
+.firstly img{
+   height: 28rem;
+   width: 28rem;
+   object-fit: cover;
+   margin: 2rem;
+}
+.firstly h1{
+   font-size: 15px;
+   color: #b3acac;
+   margin: 2rem;
+}
+.firstly p{
+  font-size: 22px;
+  margin: 2rem;
+}
+.secondaly{
+  display: flex;
+  justify-content: center;
+  
+}
+.secondaly img{
+   height: 28rem;
+   width: 28rem;
+   object-fit: cover;
+   margin: 2rem;
+}
+.secondaly h1{
+   font-size: 15px;
+   color: #b3acac;
+   margin: 2rem;
+}
+.secondaly p{
+  font-size: 22px;
+  margin: 2rem;
+}
+.thridly{
+  display: flex;
+  justify-content: center;
+}
+.thridly img{
+  height: 28rem;
+  width: 28rem;
+  object-fit: cover;
+  margin: 2rem;
+}
+.thridly p{
+  font-size: 22px;
+  margin: 2rem;
+}
+.thridly h1{
+  font-size: 15px;
+  color: #b3acac;
+  margin: 2rem;
+}
+.apartment button{
+  height: 3rem;
+  width: 15rem;
   background-color: #000;
   color: #ffffff;
+  margin-left: 40rem;
+  margin-bottom: 3rem;
+}
+.last{
+ background-color: #000; 
+ color:#ffffff;
 }
 .media{
   display: flex;
   justify-content: space-around;
+  margin: 5rem;
 }
 .medi ul{
   display: flex;
-  justify-content:space-around ;
-  text-decoration: none;
-
-}
-.medi li{
-  margin: 2rem;
-  
-}
-.work{
-  display: flex;
   justify-content: space-around;
-  font-weight: 400;
   margin-top: 5rem;
 }
+.medi li{
+  text-decoration: none;
+  margin-left: 2rem;
+}
+.service{
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem  0 5rem  0;
+}
+.service h1{
+  font-size: 18px;
+  font-weight: 300;
+}
+.service p{
+  font-size: 15px;
+  font-weight: 100;
+}
+.new input{
+  width: 20rem;
+  border-color: #ffffff;
+}
+  
+.new button{
+  color: #ffffff;
+}
+
 
 
 
