@@ -9,11 +9,27 @@ body{
    display: flex;
    justify-content: flex-start;
    background-color: #ffffff;
-   
 }   
 .white p{
    margin-left:2rem ;
    color: rgb(0, 0, 0);
+}
+.white p{
+  position: relative;
+  left: 100px;
+  animation: slide-right .6s linear forwards ;
+  animation-delay: 1.3s;
+  opacity: 0;
+}
+@keyframes slide-right {
+    0%{
+      left: 50px;
+      opacity: 0;
+    }
+    100%{
+      left: 0;
+      opacity: 1;
+    }
 }
 .blue{
     background-color: rgb(0, 0, 0);
@@ -22,14 +38,14 @@ body{
     display: flex;
     justify-content: space-evenly;
 }
-img{
+.blue img{
     height: 6rem;
     width: 8rem;
     object-fit: cover;
     margin-top:15px;
 
 }
-a{
+.navigation a{
     text-decoration: none;
     color: white;
     margin-left: 2rem;
@@ -50,7 +66,7 @@ input{
    height: 100vh;
    width: 100%;
    margin-top: -1rem;
-   background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329104/WhatsApp_Image_2025-08-29_at_6.05.44_PM_1_zsknub.jpg');
+   background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329103/WhatsApp_Image_2025-08-29_at_6.05.45_PM_1_emekyr.jpg');
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -94,22 +110,17 @@ input{
 .content{
     width: 100%;
     padding-top: 10rem;
+    text-align: center;
     
 }
 .content h1{
     font-size: 4rem;
-    color: rgb(255, 255, 255);
-    margin-left:4rem ;
-}
+    color: rgb(0, 0, 0);
+  }
 .content h3{
-    font-size:2rem;
-    color: rgb(0, 140, 255);
-    margin-left: 4rem;
-}
-.content p{
-    margin: 5rem 4rem;
     color: #ffffff;
     text-transform: bold;
+    margin: 3rem;
     
 }
 .move{
