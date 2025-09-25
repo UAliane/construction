@@ -63,21 +63,47 @@ body {
 }
 
 @keyframes slideLeft {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-25%); }
-  50% { transform: translateX(-50%); }
-  75% { transform: translateX(-75%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-75%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideText {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50vw); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50vw);
+  }
 }
 
 @keyframes slideIn {
-  0% { transform: translateX(-100%); opacity: 0; }
-  100% { transform: translateX(0); opacity: 1; }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .blue {
@@ -118,7 +144,10 @@ input {
   height: 100vh;
   width: 100%;
   margin-top: -1rem;
-  overflow: hidden;
+  background-image: url('https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329103/WhatsApp_Image_2025-08-29_at_6.05.45_PM_1_emekyr.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .content {
@@ -154,17 +183,19 @@ input {
   display: block;
   white-space: nowrap;
   animation: slideText 20s linear infinite;
+  width: 100%;
 }
 
 .move ul li {
   display: inline-block;
+  gap: 4rem;
   width: 100vw;
   font-size: 13px;
 }
 
-.move button {
+.move a {
   margin: 0 3rem;
-  background-color: #DAA520;
+text-decoration: none;
   color: #000;
   border: none;
   padding: 0.5rem 1.5rem;
@@ -241,6 +272,7 @@ input {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -251,6 +283,7 @@ input {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding-bottom: 2rem;
 
 }
 
@@ -260,7 +293,24 @@ input {
 
 .pink {
   width: 50%;
-  margin: 5rem 5rem 5rem 10rem;
+  margin: 5rem 5rem 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .pink h1 {
@@ -298,11 +348,12 @@ input {
   object-fit: cover;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   color: white;
   border: none;
   padding: 0.5rem 0.8rem;
@@ -314,7 +365,8 @@ input {
   display: none;
 }
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background: #DAA520;
 }
 
@@ -327,7 +379,9 @@ input {
 }
 
 @media (max-width: 768px) {
-  .prev, .next {
+
+  .prev,
+  .next {
     display: block;
   }
 }
@@ -351,7 +405,7 @@ button {
 .pink button:hover {
   background-color: #B8860B;
   transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .why {
@@ -477,7 +531,7 @@ button {
 .circle {
   height: 25rem;
   width: 25rem;
- 
+
   border: 1px solid #ffffff;
   text-align: center;
   margin-top: 11rem;
@@ -518,7 +572,9 @@ button {
   color: #DAA520;
 }
 
-.firstly, .secondaly, .thridly {
+.firstly,
+.secondaly,
+.thridly {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -534,9 +590,17 @@ button {
   animation-fill-mode: both;
 }
 
-.onely:nth-child(1) { animation-delay: 0.1s; }
-.onely:nth-child(2) { animation-delay: 0.2s; }
-.onely:nth-child(3) { animation-delay: 0.3s; }
+.onely:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.onely:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.onely:nth-child(3) {
+  animation-delay: 0.3s;
+}
 
 .onely img {
   height: 28rem;
@@ -550,7 +614,7 @@ button {
 
 .onely img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .onely h1 {
@@ -588,6 +652,7 @@ button {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -606,6 +671,7 @@ button {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -651,9 +717,8 @@ button {
 }
 
 .service {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  justify-content: space-between;
   margin: 2rem auto;
   max-width: 1200px;
   padding: 0 1rem;
@@ -663,7 +728,11 @@ button {
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 0.5rem;
-  color: #DAA520;
+}
+
+.link a {
+  text-decoration: none;
+  color: white;
 }
 
 .service p {
