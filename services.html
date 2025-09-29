@@ -59,7 +59,7 @@
   <!-- OVERVIEW -->
   <section class="overview section-padding">
     <div class="container-max">
-      <div class="overview-grid">
+      <div class="overview-grid ">
         <div>
           <h2 class="text-black text-sm font-semibold tracking-wide mb-6">SERVICES</h2>
           <p class="text-gray-700">
@@ -71,9 +71,19 @@
         </div>
         <div class="overview-img">
           <div class="yellow-box"></div>
-          <img
-            src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758823774/WhatsApp_Image_2025-09-25_at_10.02.45_kaqysr.jpg"
-            alt="Urban Architecture Model">
+          <div class="slider">
+            <div class="slide"><img
+                src="https://res.cloudinary.com/dspsj31q8/image/upload/v1759137293/WhatsApp_Image_2025-09-25_at_09.47.59_x8my5f.jpg"
+                alt="Urban Architecture Model"></div>
+            <div class="slide"><img
+                src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758823774/WhatsApp_Image_2025-09-25_at_10.02.45_kaqysr.jpg"
+                alt="Urban Architecture Model"></div>
+            <div class="slide"><img
+                src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758823773/WhatsApp_Image_2025-09-25_at_09.47.59_ssl4j0.jpg"
+                alt="Urban Architecture Model"></div>
+          </div>
+          <button class="prev"><</button>
+          <button class="next">></button>
         </div>
       </div>
     </div>
@@ -257,13 +267,65 @@
       document.getElementById("nav-menu").classList.toggle("active");
     }
 
-    let sliders = document.querySelectorAll('.slider');
-    sliders.forEach(slider => {
+    // Slider functionality
+    document.querySelectorAll('.slider').forEach(slider => {
+      const slides = slider.querySelectorAll('.slide');
+      const slideCount = slides.length;
+      const slideWidth = 100 / slideCount;
       let current = 0;
-      setInterval(() => {
-        current = (current + 1) % 4;
-        slider.style.transform = `translateX(-${current * 25}%)`;
-      }, 6000);
+      let autoSlide;
+
+      function updateSlide() {
+        slider.style.transform = `translateX(-${current * slideWidth}%)`;
+      }
+
+      function nextSlide() {
+        current = (current + 1) % slideCount;
+        updateSlide();
+      }
+
+      function prevSlide() {
+        current = (current - 1 + slideCount) % slideCount;
+        updateSlide();
+      }
+
+      // Auto-slide on desktop
+      if (window.innerWidth > 768) {
+        autoSlide = setInterval(nextSlide, 7000);
+      }
+
+      // Button controls
+      const prevBtn = slider.parentElement.querySelector('.prev');
+      const nextBtn = slider.parentElement.querySelector('.next');
+      if (prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          if (autoSlide) clearInterval(autoSlide);
+        });
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          if (autoSlide) clearInterval(autoSlide);
+        });
+      }
+
+      // Touch controls for mobile
+      let startX = 0;
+      let endX = 0;
+
+      slider.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      slider.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) {
+          nextSlide();
+          if (autoSlide) clearInterval(autoSlide);
+        } else if (endX - startX > 50) {
+          prevSlide();
+          if (autoSlide) clearInterval(autoSlide);
+        }
+      });
     });
   </script>
 

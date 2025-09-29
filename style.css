@@ -43,6 +43,17 @@ body {
   }
 }
 
+.service-s{
+
+  width: 100%;
+  height: 10rem !important;
+}
+
+.service-s img{
+
+  height: 100% !important;
+}
+
 .slider {
 
   width: 400%;
@@ -1188,12 +1199,14 @@ button {
     /* ===== OVERVIEW ===== */
     .overview {
       background: #fff;
+      height: 12rem;
     }
     .overview-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
       align-items: center;
+      height: 100%;
     }
     @media (min-width: 1024px) {
       .overview-grid {
@@ -1214,10 +1227,58 @@ button {
     .overview-img {
       position: relative;
     }
-    .overview-img img {
+    .overview-img {
+      overflow: hidden;
+      position: relative;
+    }
+    .overview-img .slider {
+      width: 300%;
+      height: 12rem;
+      transition: transform 1s ease;
+    }
+    .overview-img .slide {
+      width: 33.333%;
+      height: 100%;
+      float: left;
+    }
+    .overview-img .slide img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 0.5rem;
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .overview-img .prev,
+    .overview-img .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      padding: 0.5rem 0.8rem;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 1.2rem;
+      border-radius: 50%;
+      transition: background 0.3s ease;
+      display: none;
+    }
+    .overview-img .prev:hover,
+    .overview-img .next:hover {
+      background: #DAA520;
+    }
+    .overview-img .prev {
+      left: 10px;
+    }
+    .overview-img .next {
+      right: 10px;
+    }
+    @media (max-width: 768px) {
+      .overview-img .prev,
+      .overview-img .next {
+        display: block;
+      }
     }
 
     /* ===== SERVICES SECTIONS ===== */
@@ -1299,6 +1360,7 @@ button {
       background-color: #ffffff;
       width: 85%;
       margin-left: 8rem;
+      margin-top: 6rem;
       height: 50vh;
     }
     .layout-right{
