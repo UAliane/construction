@@ -1291,3 +1291,26 @@ button {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(10px); }
     }
+
+
+    /* aliane */
+
+    .layout-left{
+      background-color: #ffffff;
+      width: 85%;
+      margin-left: 8rem;
+      height: 50vh;
+    }
+    .layout-right{
+      background-color: #ffffff;
+      width: 85%;
+      margin-left: 8rem;
+      height: 50vh;
+    }
+    .icon{
+      margin-left: 15rem;
+    }
+    .last{
+      margin-top: 30px;
+    }
+    
