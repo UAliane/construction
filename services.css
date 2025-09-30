@@ -170,7 +170,6 @@
 
     /* Scroll-triggered animation for grid sections */
     .grid.grid-2 {
-      margin-bottom: 6rem;
       opacity: 0;
       transform: translateY(50px);
       transition: opacity 2s ease, transform 2s ease;
