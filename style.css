@@ -583,16 +583,65 @@ button {
   color: #DAA520;
 }
 
-.firstly,
-.secondaly,
-.thridly {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+.projects-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
   margin: 2rem auto;
   max-width: 1200px;
-  padding: 0 2rem;
+}
+
+.projects-slider {
+  display: flex;
+  width: calc(280px * 8 + 14rem); /* 8 cards * 280px + 7 gaps * 2rem */
+  transition: transform 0.5s ease;
+}
+
+.onely {
+  flex-shrink: 0;
+  margin-right: 2rem;
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+  animation-fill-mode: both;
+  cursor: pointer;
+}
+
+.onely:nth-child(1) { animation-delay: 0.1s; }
+.onely:nth-child(2) { animation-delay: 0.2s; }
+.onely:nth-child(3) { animation-delay: 0.3s; }
+.onely:nth-child(4) { animation-delay: 0.4s; }
+.onely:nth-child(5) { animation-delay: 0.5s; }
+.onely:nth-child(6) { animation-delay: 0.6s; }
+.onely:nth-child(7) { animation-delay: 0.7s; }
+.onely:nth-child(8) { animation-delay: 0.8s; }
+
+.apartment .prev,
+.apartment .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.apartment .prev:hover,
+.apartment .next:hover {
+  background: #DAA520;
+}
+
+.apartment .prev {
+  left: 10px;
+}
+
+.apartment .next {
+  right: 10px;
 }
 
 .onely {
@@ -957,6 +1006,15 @@ button {
     padding: 0;
   }
 
+  .onely {
+    width: 250px;
+    margin-right: 1rem;
+  }
+
+  .projects-slider {
+    width: calc(250px * 8 + 7rem);
+  }
+
 }
 
 /* Hamburger Menu */
@@ -979,10 +1037,8 @@ button {
     flex-direction: column;
   }
 
-  .firstly,
-  .secondaly,
-  .thridly {
-    grid-template-columns: repeat(2, 1fr);
+  .projects-slider {
+    width: calc(280px * 8 + 14rem);
   }
 
 }
@@ -1068,6 +1124,29 @@ button {
 
   .circle h1 {
     font-size: 2rem;
+  }
+
+  /* Projects slider on very small screens */
+  .onely {
+    width: 220px;
+    margin-right: 0.5rem;
+  }
+
+  .projects-slider {
+    width: calc(220px * 8 + 4rem);
+  }
+
+  .onely img {
+    height: 20rem;
+    max-width: 20rem;
+  }
+
+  .onely h1 {
+    font-size: 12px;
+  }
+
+  .onely p {
+    font-size: 18px;
   }
 }
 
@@ -1377,3 +1456,9 @@ button {
     .overview{
       margin-bottom: 10rem;
     }
+
+
+
+
+
+    

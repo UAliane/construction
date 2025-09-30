@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services - Hashhive Contractor</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="services.css">
 </head>
 
 <body>
@@ -112,7 +113,7 @@
   <section class="grid grid-2 layout-right">
     <div class="image">
       <img
-        src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758873096/WhatsApp_Image_2025-09-25_at_22.16.57_yp5gtm.jpg"
+        src="https://res.cloudinary.com/dspsj31q8/image/upload/v1759215041/360_F_522297622_S1d59Rn2l1FPxjdm57s3G4hbdnqh34ZB_xiuxqq.jpg"
         alt="Service two image">
     </div>
     <div class="content bg-white">
@@ -151,7 +152,7 @@
   <section class="grid grid-2 layout-right">
     <div class="image">
       <img
-        src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758823773/WhatsApp_Image_2025-09-25_at_09.48.00_ibamle.jpg"
+        src="https://res.cloudinary.com/dspsj31q8/image/upload/v1759211130/WhatsApp_Image_2025-09-26_at_09.11.33_kcmc9j.jpg"
         alt="Service two image">
     </div>
     <div class="content bg-white">
@@ -326,6 +327,25 @@
           if (autoSlide) clearInterval(autoSlide);
         }
       });
+    });
+
+    // Scroll-triggered animation for grid sections
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all grid-2 sections
+    document.querySelectorAll('.grid.grid-2').forEach(section => {
+      observer.observe(section);
     });
   </script>
 
