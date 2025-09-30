@@ -604,7 +604,7 @@ button {
   animation: fadeInUp 1s ease-out;
   animation-fill-mode: both;
   cursor: pointer;
-  width: 370px;
+  width: 280px;
 }
 
 .onely:nth-child(1) { animation-delay: 0.1s; }
