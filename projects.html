@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Projects - Hashhive Contractor</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -167,10 +169,68 @@
     </div>
   </footer>
 
+  <!-- CHAT WIDGET -->
+  <div id="chatWidget" class="fixed bottom-20 right-6 w-80 bg-white border shadow-lg rounded-lg hidden flex-col">
+    <div class="bg-[#171919] text-white px-4 py-2 flex justify-between items-center rounded-t-lg">
+      <span class="font-bold">Chat with us</span>
+      <button id="closeChat" class="text-white">✕</button>
+    </div>
+    <div id="chatMessages" class="p-4 h-60 overflow-y-auto text-sm space-y-2">
+      <div class="text-gray-600">👋 Hi! How can we help you?</div>
+    </div>
+    <div class="border-t flex">
+      <input id="chatInput" type="text" placeholder="Type your message..." class="flex-1 p-2 text-sm outline-none">
+      <button id="sendChat" class="px-3 text-[#171919] font-bold">➤</button>
+    </div>
+  </div>
+
+  <!-- Floating Button -->
+  <button id="chatToggle"
+    class="fixed bottom-6 right-6 w-14 h-14 bg-[#48b08e] text-white rounded-full shadow-lg flex items-center justify-center text-2xl hover:bg-[#34a37c]">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+  </button>
+
   <script>
     function toggleMenu() {
       document.getElementById("nav-menu").classList.toggle("active");
     }
+
+    // Chat widget functionality
+    document.getElementById('chatToggle').addEventListener('click', () => {
+      document.getElementById('chatWidget').classList.toggle('hidden');
+    });
+
+    document.getElementById('closeChat').addEventListener('click', () => {
+      document.getElementById('chatWidget').classList.add('hidden');
+    });
+
+    document.getElementById('sendChat').addEventListener('click', () => {
+      const input = document.getElementById('chatInput');
+      const message = input.value.trim();
+      if (message) {
+        const messagesDiv = document.getElementById('chatMessages');
+        const userMessage = document.createElement('div');
+        userMessage.className = 'text-right text-blue-600';
+        userMessage.textContent = message;
+        messagesDiv.appendChild(userMessage);
+        input.value = '';
+        messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        // Simulate response
+        setTimeout(() => {
+          const botMessage = document.createElement('div');
+          botMessage.className = 'text-gray-600';
+          botMessage.textContent = 'Thank you for your message. We will get back to you soon!';
+          messagesDiv.appendChild(botMessage);
+          messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }, 1000);
+      }
+    });
+
+    document.getElementById('chatInput').addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        document.getElementById('sendChat').click();
+      }
+    });
   </script>
 
 </body>
