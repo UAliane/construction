@@ -272,6 +272,27 @@
 
     </footer>
 
+      <!-- CHAT WIDGET -->
+  <div id="chatWidget" class="fixed bottom-20 right-6 w-80 bg-white border shadow-lg rounded-lg hidden flex-col">
+    <div class="bg-[#171919] text-white px-4 py-2 flex justify-between items-center rounded-t-lg">
+      <span class="font-bold">Chat with us</span>
+      <button id="closeChat" class="text-white">✕</button>
+    </div>
+    <div id="chatMessages" class="p-4 h-60 overflow-y-auto text-sm space-y-2">
+      <div class="text-gray-600">👋 Hi! How can we help you?</div>
+    </div>
+    <div class="border-t flex">
+      <input id="chatInput" type="text" placeholder="Type your message..." class="flex-1 p-2 text-sm outline-none">
+      <button id="sendChat" class="px-3 text-[#171919] font-bold">➤</button>
+    </div>
+  </div>
+
+  <!-- Floating Button -->
+  <button id="chatToggle"
+    class="fixed bottom-6 right-6 w-14 h-14 bg-[#48b08e] text-white rounded-full shadow-lg flex items-center justify-center text-2xl hover:bg-[#34a37c]">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+  </button>
+
   <script>
     function toggleMenu() {
       document.getElementById("nav-menu").classList.toggle("active");
