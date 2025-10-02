@@ -158,6 +158,7 @@
     .image {
       position: relative;
       min-height: 400px;
+      width: 91%;
     }
     .image img {
       width: 100%;

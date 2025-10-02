@@ -1439,13 +1439,13 @@ button {
     .layout-left{
       background-color: #ffffff;
       width: 100%;
-      margin-left: 0;
+      margin-left: 2rem;
       height: 50vh;
     }
     .layout-right{
       background-color: #ffffff;
       width: 100%;
-      margin-left: 0;
+      margin-right: 2rem;
       height: 50vh;
     }
     .icon{
