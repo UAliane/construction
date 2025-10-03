@@ -6,9 +6,11 @@
 
 .projects-slider {
   display: flex;
-  width: 300vw; /* 3 slides * 100vw */
+  width: 300vw;
+  /* 3 slides * 100vw */
   transition: transform 2s ease;
 }
+
 footer {
   display: none;
 }
@@ -18,6 +20,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 28rem;
   flex-shrink: 0;
 }
 
@@ -27,7 +30,15 @@ footer {
 
 .left-side {
   width: 50%;
-  padding: 20px;
+  padding: 0px 20px;
+  display: flex;
+  height: 100%;
+  font-size: smaller;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left-side h1 h2{
+  
 }
 
 .d-flex {
@@ -45,11 +56,12 @@ footer {
 }
 
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px;
