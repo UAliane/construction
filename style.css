@@ -135,6 +135,13 @@ img {
   text-decoration: none;
   color: white;
   margin-left: 2rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom-color 0.5s ease;
+}
+.navigation a:hover {
+  border-bottom-color: white;
 }
 
 .navigation {

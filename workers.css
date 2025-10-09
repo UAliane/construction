@@ -81,3 +81,28 @@ h2{
 .next {
   right: 10px;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  .right-side,
+  .left-side {
+    width: 100%;
+    margin: 0;
+  }
+  .left-side {
+    padding: 1rem;
+  }
+  .right-side img {
+    width: 100%;
+    height: auto;
+  }
+  .d-flex {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
