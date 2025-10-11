@@ -176,6 +176,7 @@ input {
 }
 
 .content h1 {
+  font-weight: 800;
   font-size: 4rem;
   color: rgb(0, 0, 0);
   animation: slideIn 1s ease-out 4s both;
@@ -405,9 +406,7 @@ text-decoration: none;
 }
 
 button {
-  height: 2rem;
-  width: 10rem;
-  margin-top: 2rem;
+  margin: 2rem;
   border-color: transparent;
   background-color: transparent;
 }
@@ -476,15 +475,15 @@ button {
 
 .more {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding-bottom: 5rem;
 }
 
 .more button {
   background-color: rgb(0, 0, 0);
-  text-decoration: underline;
+  text-decoration: none;
   color: #ffffff;
-  font-size: 15px;
+  font-size: 70px;
 }
 
 .more p {
@@ -552,7 +551,7 @@ button {
 
   border: 1px solid #ffffff;
   text-align: center;
-  margin-top: 11rem;
+  margin-top: 4rem;
   color: #ffffff;
 }
 
