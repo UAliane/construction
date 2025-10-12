@@ -759,6 +759,18 @@ button {
   }
 }
 
+/* Scroll-triggered animation for index page sections */
+.one, .why, .percent, .apartment {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.one.animate, .why.animate, .percent.animate, .apartment.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .last {
   background-color: #000;
   color: #ffffff;

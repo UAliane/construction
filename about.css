@@ -345,6 +345,18 @@ body {
 /* CTA */
 
 
+/* Scroll-triggered animation for about page sections */
+.location, .centa, .center, .mission, .overview {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.location.animate, .centa.animate, .center.animate, .mission.animate, .overview.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
