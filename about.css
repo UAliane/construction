@@ -447,11 +447,47 @@ body {
     font-size: 2rem;
   }
 
-  .overview .grid,
-  .stats .grid,
-  .mission .grid,
-  .values .grid,
+  .overview {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .mission {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
   .location .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .why {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .center {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .innovation {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .staff {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .values .grid,
+  .stats .grid {
     grid-template-columns: 1fr;
   }
 }

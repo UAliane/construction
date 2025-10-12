@@ -418,4 +418,57 @@ textarea:focus {
   .form-map-container {
     padding: 1rem;
   }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .flex-between {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-info div {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .info-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .info-box .name {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

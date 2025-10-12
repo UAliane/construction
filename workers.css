@@ -85,7 +85,8 @@ h2{
 /* Responsive */
 @media (max-width: 768px) {
   .projects {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     height: auto;
     padding: 1rem;
   }
@@ -95,6 +96,8 @@ h2{
     margin: 0;
   }
   .left-side {
+    display: grid;
+    grid-template-columns: 1fr;
     padding: 1rem;
   }
   .right-side img {
@@ -102,7 +105,8 @@ h2{
     height: auto;
   }
   .d-flex {
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
   }
 }

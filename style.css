@@ -918,15 +918,16 @@ button {
 
   /* Navbar */
   .blue {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     height: auto;
     padding: 1rem;
     text-align: center;
   }
 
   .navigation ul {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 0;
     margin: 1rem 0;
@@ -976,7 +977,8 @@ button {
 
   /* Move section */
   .move ul {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.5rem;
     text-align: center;
     margin: 1rem 0;
@@ -984,7 +986,8 @@ button {
 
   /* Unique section */
   .combine {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     margin: 1rem;
   }
 
@@ -999,7 +1002,8 @@ button {
 
   /* Services cards */
   .one {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     margin-bottom: 2rem;
   }
 
@@ -1019,12 +1023,14 @@ button {
 
   /* Why Us */
   .fine {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     text-align: center;
   }
 
   .win {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     height: auto;
     padding: 2rem 1rem;
   }
@@ -1039,7 +1045,8 @@ button {
 
   /* Percent section */
   .percent {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     height: auto;
     padding: 2rem 0;
     gap: 2rem;
@@ -1053,7 +1060,8 @@ button {
 
   /* Projects */
   .apartment ul {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 0;
   }
@@ -1129,17 +1137,15 @@ button {
 
   .media {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 
   .service {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
     width: 100%;
   }
 
@@ -1209,10 +1215,9 @@ button {
 
   .media {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 
   #nav-menu {
@@ -1246,10 +1251,9 @@ button {
   }
 
   .service {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
     width: 100%;
   }
 }
