@@ -14,7 +14,7 @@ body {
 .containr {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  
 }
 
 /* Hero Section */
@@ -224,8 +224,8 @@ body {
 .center {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 2px;
+  justify-content: space-around;
+  padding: 0rem 1.8rem;
 }
 
 .timely {
@@ -236,6 +236,11 @@ body {
   margin-bottom: 5rem;
 }
 
+.rural-box{
+  background-color: white;
+  padding: 3rem;
+
+}
 .timely:hover {
   background-color: wheat;
 }
