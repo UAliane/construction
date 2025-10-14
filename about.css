@@ -17,6 +17,10 @@ body {
   
 }
 
+.topp {
+  max-width: 100%;
+}
+
 /* Hero Section */
 .hero {
   margin: 0 2rem;
@@ -237,8 +241,10 @@ body {
 }
 
 .rural-box{
-  background-color: white;
+  background-color: #252c35;
   padding: 3rem;
+  width: 50%;
+  color: wheat;
 
 }
 .timely:hover {

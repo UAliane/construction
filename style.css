@@ -124,12 +124,12 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
-
-img {
-  height: 8rem;
+.logo img {
+  height: 7rem !important;
   width: 10rem;
   object-fit: cover;
 }
+
 
 .navigation a {
   text-decoration: none;
@@ -178,7 +178,7 @@ input {
 .content h1 {
   font-weight: 800;
   font-size: 4rem;
-  color: rgb(0, 0, 0);
+  color: white;
   animation: slideIn 1s ease-out 4s both;
 }
 
@@ -417,6 +417,8 @@ button {
   border: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  padding: 5px;
+  border-radius: 1rem;
 }
 
 .pink button:hover {
@@ -705,7 +707,7 @@ button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.7);
+  background: transparent;
   color: white;
   border: none;
   padding: 0.5rem 0.8rem;
@@ -718,7 +720,7 @@ button {
 
 .projects-container .prev:hover,
 .projects-container .next:hover {
-  background: #DAA520;
+  background: transparent;
 }
 
 .projects-container .prev {
@@ -810,22 +812,22 @@ button {
   transform: scale(1.05);
 }
 
-.medi ul {
+.name {
   display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  gap: 1rem;
 }
 
-.medi li {
-  margin-left: 1rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
+.name a {
+  transition: transform 0.3s ease;
 }
 
-.medi li:hover {
-  color: #DAA520;
+.name a:hover {
   transform: translateY(-2px);
+}
+
+.name i {
+  color: white;
+  font-size: 40px;
 }
 
 .service {
