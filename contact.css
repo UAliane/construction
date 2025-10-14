@@ -465,6 +465,7 @@ textarea:focus {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+    width: 100% !important;
   }
 
   .info-box .name {

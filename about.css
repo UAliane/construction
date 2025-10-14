@@ -272,7 +272,7 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 5px;
-  margin: 3rem;
+  margin: 1.5rem;
 }
 
 .innovation img {
@@ -495,5 +495,23 @@ body {
   .values .grid,
   .stats .grid {
     grid-template-columns: 1fr;
+  }
+  .creating {
+    width: 100% !important;
+  }
+  .phot {
+    width: 100% !important;
+  }
+  .real {
+    width: 100% !important;
+  }
+  .setting {
+    width: 100% !important;
+  }
+  .rural-box {
+    width: 100% !important;
+  }
+  .city-box {
+    width: 100% !important;
   }
 }
