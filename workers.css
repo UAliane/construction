@@ -4,6 +4,17 @@
   overflow: hidden;
 }
 
+.hero {
+  width: auto;
+  margin: 0 2rem;
+  height: 60vh;
+  position: relative;
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
 .projects-slider {
   display: flex;
   width: 300vw;

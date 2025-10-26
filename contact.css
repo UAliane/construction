@@ -63,7 +63,7 @@ input {
 
 .hero h1 {
   padding-top: 5rem;
-  position: fixed;
+  position: absolute;
   font-size: 4rem;
 }
 
