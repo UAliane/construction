@@ -4,6 +4,8 @@
   background-color: #f7f7f8;
 }
 
+.head {}
+
 .title {
   font-size: 2.5rem;
   color: var(--blackColor);
@@ -36,11 +38,73 @@ input {
   background-color: rgba(224, 224, 224, 0.566) !important;
 }
 
-.conv {
-  width: 100% !important;
-  height: auto;
+.hero {
+  width: auto;
+  margin: 0 2rem;
+  height: 60vh;
+  position: relative;
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
 }
 
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero h1 {
+  padding-top: 5rem;
+  position: fixed;
+  font-size: 4rem;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.hero-text {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.conv {
+  margin: 0 2rem;
+  height: 60vh;
+  position: relative;
+  background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  background-image: url(https://res.cloudinary.com/dsshezi20/image/upload/v1761476814/young-black-race-man-with-blueprint-stading-near-glass-building_d2nz2e.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.conv h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  font-size: 5rem;
+  align-items: center;
+  color: white;
+
+}
 
 .form {
   width: 65% !important;
@@ -124,7 +188,8 @@ input {
   padding: 0px;
   box-sizing: border-box;
 }
-.ht{
+
+.ht {
   padding: 45px !important;
 }
 
@@ -306,12 +371,12 @@ body {
   background: #0c1329;
   color: #fff;
   padding: 30px;
-margin-top: 12%;
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 12%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .info-box h3 {
