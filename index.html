@@ -66,13 +66,13 @@
             <div class="slide"><img
                 src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758873096/WhatsApp_Image_2025-09-25_at_09.00.37_zc08fh.jpg"
                 alt=""></div>
-            <div class="slide"><img
+            <div class="slide phone"><img
                 src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758873096/WhatsApp_Image_2025-09-24_at_01.21.12_i5w1c6.jpg"
                 alt=""></div>
-            <div class="slide"><img
+            <div class="slide phone"><img
                 src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758873096/WhatsApp_Image_2025-09-25_at_09.00.38_ku3plm.jpg"
                 alt=""></div>
-            <div class="slide"><img
+            <div class="slide phone"><img
                 src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758803460/WhatsApp_Image_2025-09-24_at_01.21.11_ne3leb.jpg"
                 alt=""></div>
           </div>
@@ -424,8 +424,16 @@
         let autoSlide;
 
         function updateSlide() {
-          slider.style.transform = `translateX(-${current * 25}%)`;
-        }
+  // Check if screen width is greater than 768px (you can adjust this breakpoint)
+  if (window.innerWidth > 768) {
+    // Run the slide animation only on big screens
+    slider.style.transform = `translateX(-${current * 25}%)`;
+  } else {
+    // On small screens (like phones), stop the slider from moving
+    slider.style.transform = `translateX(0)`;
+  }
+}
+
 
         function nextSlide() {
           current = (current + 1) % 4;
@@ -543,10 +551,23 @@
       const mainSlider = document.querySelector('.container .slider');
       if (mainSlider && window.innerWidth > 768) {
         let current = 0;
-        setInterval(() => {
+        const autoSlideInterval = setInterval(() => {
           current = (current + 1) % 4;
           mainSlider.style.transform = `translateX(-${current * 25}%)`;
         }, 6000);
+
+        // Stop auto-slide on small screens
+        window.addEventListener('resize', () => {
+          if (window.innerWidth <= 768) {
+            clearInterval(autoSlideInterval);
+          } else if (!autoSlideInterval) {
+            // Restart if resized back to desktop
+            setInterval(() => {
+              current = (current + 1) % 4;
+              mainSlider.style.transform = `translateX(-${current * 25}%)`;
+            }, 6000);
+          }
+        });
       }
 
 

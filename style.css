@@ -1057,6 +1057,27 @@ button {
   .architect img {
     height: auto;
   }
+  .architect .slide {
+    width: 768px !important;
+    height: 100%;
+    float: left;
+}
+
+  .architect .slide img {
+    width: 100% !important;
+    height: auto;
+    object-fit: contain;
+  }
+  .architect .slider{
+    width: 100% !important;
+  }
+  .phone{
+    display: none !important;
+  }
+
+  .slider {
+    transform: none !important;
+  }
 
   /* Why Us */
   .fine {
@@ -1930,6 +1951,10 @@ body {
   .container {
     width: 100% !important;
   }
+  .architect{
+    width: 100% !important;
+  }
+  
 
   .insights-grid {
     grid-template-columns: 1fr;
@@ -1959,4 +1984,9 @@ body {
     .container {
         max-width: 100% !important; 
     }
+    .architect{
+    width: 100% !important;
+  }
+  
+    
 }

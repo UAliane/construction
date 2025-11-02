@@ -10,11 +10,13 @@ body {
   color: #333;
 }
 
+
+
 /* containr */
 .containr {
   max-width: 100%;
   margin: 0 auto;
-  
+
 }
 
 .topp {
@@ -240,13 +242,14 @@ body {
   margin-bottom: 5rem;
 }
 
-.rural-box{
+.rural-box {
   background-color: #252c35;
   padding: 3rem;
   width: 50%;
   color: wheat;
 
 }
+
 .timely:hover {
   background-color: wheat;
 }
@@ -453,6 +456,10 @@ body {
     font-size: 2rem;
   }
 
+  .hero .containr {
+    display: none !important;
+  }
+
   .overview {
     display: grid;
     grid-template-columns: 1fr;
@@ -496,21 +503,27 @@ body {
   .stats .grid {
     grid-template-columns: 1fr;
   }
+
   .creating {
     width: 100% !important;
   }
+
   .phot {
     width: 100% !important;
   }
+
   .real {
     width: 100% !important;
   }
+
   .setting {
     width: 100% !important;
   }
+
   .rural-box {
     width: 100% !important;
   }
+
   .city-box {
     width: 100% !important;
   }
