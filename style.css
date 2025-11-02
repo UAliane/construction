@@ -597,8 +597,7 @@ button {
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin: 2rem auto;
-  max-width: 1200px;
+  margin: 2rem ;
 }
 
 .projects-slider {
@@ -1270,7 +1269,7 @@ button {
     display: none;
     flex-direction: column;
     background-color: rgb(0, 140, 255);
-    width: 100%;
+    width: 100% !important;
     padding: 1rem 0;
   }
 
@@ -1954,4 +1953,10 @@ body {
   .hero h1 {
     font-size: 2rem !important;
   }
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 100% !important; 
+    }
 }

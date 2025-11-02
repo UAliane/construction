@@ -19,7 +19,7 @@
  }
 
  .container-max {
-   max-width: 1200px;
+   max-width: 100%;
    margin: 0 auto;
  }
 
@@ -289,6 +289,9 @@
  @media (max-width: 768px) {
    .hero {
      height: 70vh;
+   }
+   .overview-grid{
+     padding: 1rem !important;
    }
 
    .hero-content {

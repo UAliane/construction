@@ -123,6 +123,9 @@ input {
 }
 
 @media (min-width: 768px) {
+      .container {
+        width: 100% !important;
+    }
   .form-map-container {
     grid-template-columns: 1fr 1fr;
   }
@@ -201,7 +204,7 @@ body {
 
 /* Containers */
 .container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
