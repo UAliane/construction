@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Mall Project Gallery - Hashhive Contractor</title>
+  <link rel="stylesheet" href="../style.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="blue">
+      <div class="logo">
+        <img
+          src="https://res.cloudinary.com/dbtchmsoy/image/upload/v1757926236/WhatsApp_Image_2025-09-15_at_10.14.08_AM_foul42.jpg"
+          alt="" />
+      </div>
+
+      <!-- Hamburger Button -->
+      <div class="hamburger" onclick="toggleMenu()">
+        ☰
+      </div>
+
+      <div class="navigation" id="nav-menu">
+        <ul>
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About Us</a>
+          <a href="../services.html">Our service</a>
+          <a href="../workers.html">Our worker</a>
+          <a href="../contact.html">Contact us</a>
+        </ul>
+      </div>
+
+      <input type="search" class="input" placeholder="search here ...">
+    </div>
+  </div>
+
+  <div class="head">
+    <h1>Shopping Mall Project Gallery</h1>
+  </div>
+
+  <div class="gallery-content">
+    <div class="gallery-nav">
+      <a href="#image" class="gallery-link active"><span>🖼️</span> Image</a>
+      <a href="#video" class="gallery-link"><span>🎬</span> Video</a>
+      <a href="#description" class="gallery-link"><span>📝</span> Description</a>
+    </div>
+
+    <div id="image" class="gallery-section active">
+      <img src="https://res.cloudinary.com/dbtchmsoy/image/upload/v1757329222/WhatsApp_Image_2025-08-29_at_6.05.53_PM_1_bd6yzz.jpg" alt="Shopping Mall Project Image">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+
+    <div id="video" class="gallery-section">
+      <video controls>
+        <source src="https://res.cloudinary.com/dsshezi20/video/upload/v1760177168/37db9ea3-69f1-4ef4-9e67-9cf997922fdc_1_zrwkgz.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div id="description" class="gallery-section">
+      <h2>DESGN, INTERIOR DESIGN</h2>
+      <p><strong>Location:</strong> Shopping mall</p>
+      <p>This shopping mall project demonstrates our expertise in design and interior design. We created a modern, functional space that serves the community while providing an excellent shopping experience.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="last">
+      <div class="media">
+        <img
+          src="https://res.cloudinary.com/dbtchmsoy/image/upload/v1757926236/WhatsApp_Image_2025-09-15_at_10.14.08_AM_foul42.jpg"
+          alt="" />
+        <div class="medi">
+          <ul>
+            <li><a href="https://www.facebook.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook" style="width: 24px; height: 24px;"></a></li>
+            <li><a href="https://www.pinterest.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/pinterest.png" alt="Pinterest" style="width: 24px; height: 24px;"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram.png" alt="Instagram" style="width: 24px; height: 24px;"></a></li>
+            <li><a href="https://www.x.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/twitter.png" alt="X" style="width: 24px; height: 24px;"></a></li>
+            <li><a href="https://www.tiktok.com" target="_blank"><img src="https://img.icons8.com/color/48/000000/tiktok.png" alt="TikTok" style="width: 24px; height: 24px;"></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="service">
+        <div class="contact">
+          <h1>CONTACT US</h1>
+          <p>Rwanda ,Kigali</p>
+          <p>nfo@hivecontractors</p>
+          <p>+250 788435371</p>
+          <p>Working Hours: Mon – Fri: 8.00AM – 5.00PM</p>
+        </div>
+        <div class="project">
+          <h1>OUR PROJECTS</h1>
+          <p>All Projects</p>
+          <p>Residential</p>
+          <p>Education</p>
+          <p>Public</p>
+        </div>
+        <div class="link">
+          <h1>LINKS</h1>
+          <P><a href="../index.html">Home</a></P>
+          <P><a href="../services.html">Our Services</a></P>
+          <P><a href="../projects.html">Our Projects</a></P>
+          <P><a href="../contact.html">Contact</a></P>
+        </div>
+        <div class="new">
+          <h1>SUBSCRIBE NEWS LETTER</h1>
+          <p>We invite you to register to read the<br>
+            latest news, offers and events about our<br>
+            company.
+          </p>
+          <input type="email" id="email" name="email" placeholder="Email Adress..." required>
+          <button type="submit">Submit</button>
+          <p>No worries, we don’t spam your inbox.</p>
+        </div>
+      </div>
+      <div class="copy">
+        <p>Copyright © 2025 Hashhive Contractor. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Button -->
+  <a href="https://wa.me/250788435371" target="_blank"
+    class="fixed bottom-6 right-6 w-14 h-14 bg-[#48b08e] text-white rounded-full shadow-lg flex items-center justify-center text-2xl hover:bg-[#34a37c]">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+  </a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+    }
+
+    // Gallery navigation
+    document.querySelectorAll('.gallery-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+
+        // Remove active class from all links and sections
+        document.querySelectorAll('.gallery-link').forEach(l => l.classList.remove('active'));
+        document.querySelectorAll('.gallery-section').forEach(s => s.classList.remove('active'));
+
+        // Add active class to clicked link and corresponding section
+        this.classList.add('active');
+        document.getElementById(targetId).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+
+</html>

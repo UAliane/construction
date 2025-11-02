@@ -58,6 +58,11 @@
           alt="" />
         <h1>ARICHITECTURE,CONSTRUCTION,INTERIO DESIGN</h1>
         <p>Nyamata</p>
+        <div class="project-links">
+          <a href="gallery/nyamata.html#image"><span>🖼️</span> image</a>
+          <a href="gallery/nyamata.html#video"><span>🎬</span> video</a>
+          <a href="gallery/nyamata.html#description"><span>📝</span> description</a>
+        </div>
       </div>
       <div class="onely">
         <img
@@ -65,6 +70,11 @@
           alt="" />
         <h1>DESGN, INTERIOR DESIGN</h1>
         <p>Shoping mall</p>
+        <div class="project-links">
+          <a href="gallery/shopping-mall.html#image"><span>🖼️</span> image</a>
+          <a href="gallery/shopping-mall.html#video"><span>🎬</span> video</a>
+          <a href="gallery/shopping-mall.html#description"><span>📝</span> description</a>
+        </div>
       </div>
     </div>
     <div class="secondaly">
@@ -74,6 +84,11 @@
           alt="" />
         <h1>ARICHITECTURE,CONSTRUCTION</h1>
         <p>Family Houe</p>
+        <div class="project-links">
+          <a href="gallery/family-house.html#image"><span>🖼️</span> image</a>
+          <a href="gallery/family-house.html#video"><span>🎬</span> video</a>
+          <a href="gallery/family-house.html#description"><span>📝</span> description</a>
+        </div>
       </div>
       <div class="onely">
         <img
@@ -81,6 +96,11 @@
           alt="" />
         <h1>ARICHITECTURE,CONSTRUCTION,INTERIO DESIGN</h1>
         <p> Health Center</p>
+        <div class="project-links">
+          <a href="gallery/health-center.html#image"><span>🖼️</span> image</a>
+          <a href="gallery/health-center.html#video"><span>🎬</span> video</a>
+          <a href="gallery/health-center.html#description"><span>📝</span> description</a>
+        </div>
       </div>
       <div class="onely">
         <img
@@ -88,6 +108,11 @@
           alt="" />
         <h1>ARICHITECTURE,CONSTRUCTION,INTERIO DESIGN</h1>
         <p>Hotel</p>
+        <div class="project-links">
+          <a href="gallery/hotel.html#image"><span>🖼️</span> image</a>
+          <a href="gallery/hotel.html#video"><span>🎬</span> video</a>
+          <a href="gallery/hotel.html#description"><span>📝</span> description</a>
+        </div>
       </div>
     </div>
     <div class="thridly">
@@ -97,6 +122,11 @@
           alt="" />
         <h1>ARICHITECTURE,CONSTRUCTION</h1>
         <p>Garden</p>
+        <div class="project-links">
+          <a href="gallery/garden.html#image"><span>🖼️</span> image</a>
+          <a href="gallery/garden.html#video"><span>🎬</span> video</a>
+          <a href="gallery/garden.html#description"><span>📝</span> description</a>
+        </div>
       </div>
       <div class="onely">
         <img
@@ -104,6 +134,11 @@
           alt="" />
         <h1>DESIGN, LANDSCAPING</h1>
         <p>Development pro Nyana</p>
+        <div class="project-links">
+          <a href="gallery/development-pro-nyana.html#image"><span>🖼️</span> image</a>
+          <a href="gallery/development-pro-nyana.html#video"><span>🎬</span> video</a>
+          <a href="gallery/development-pro-nyana.html#description"><span>📝</span> description</a>
+        </div>
       </div>
       <div class="onely">
         <img
@@ -111,6 +146,11 @@
           alt="" />
         <h1>CONSTRUCTION, DESIGN</h1>
         <p>Irrigqtion</p>
+        <div class="project-links">
+          <a href="gallery/irrigation.html#image"><span>🖼️</span> image</a>
+          <a href="gallery/irrigation.html#video"><span>🎬</span> video</a>
+          <a href="gallery/irrigation.html#description"><span>📝</span> description</a>
+        </div>
       </div>
       </div>
     </div>
@@ -172,6 +212,15 @@
     </div>
   </footer>
 
+  <!-- Modal for Gallery, Video, and Description -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modal-body">
+        <!-- Content will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
 
   <!-- Floating Button -->
   <a href="https://wa.me/250788435371" target="_blank"
@@ -182,6 +231,45 @@
   <script>
     function toggleMenu() {
       document.getElementById("nav-menu").classList.toggle("active");
+    }
+
+    // Modal functionality
+    const modal = document.getElementById("project-modal");
+    const modalBody = document.getElementById("modal-body");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    // Event listeners for project links
+    document.querySelectorAll('.project-links a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const type = this.getAttribute('data-type');
+        const src = this.getAttribute('data-src') || '';
+
+        if (type === 'image') {
+          modalBody.innerHTML = `<img src="${src}" alt="Project Image" style="max-width: 100%; max-height: 80vh;">`;
+        } else if (type === 'video') {
+          modalBody.innerHTML = `<video controls style="max-width: 100%; max-height: 80vh;"><source src="${src}" type="video/mp4">Your browser does not support the video tag.</video>`;
+        } else if (type === 'description') {
+          const projectDiv = this.closest('.onely');
+          const title = projectDiv.querySelector('h1').textContent;
+          const location = projectDiv.querySelector('p').textContent;
+          modalBody.innerHTML = `<h2>${title}</h2><p>Location: ${location}</p><p>This is a detailed description of the ${title} project located in ${location}. More details would be added here.</p>`;
+        }
+
+        modal.style.display = "block";
+      });
+    });
+
+    // Close modal when clicking the close button
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
 
   </script>
