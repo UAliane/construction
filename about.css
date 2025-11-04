@@ -464,44 +464,52 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+    padding: 1rem;
   }
 
   .mission {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+    padding: 1rem;
   }
 
   .location .grid {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
   .why {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
   .center {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
   .innovation {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+    padding: 1rem;
   }
 
   .staff {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+    padding: 1rem;
   }
 
   .values .grid,
   .stats .grid {
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
   .creating {

@@ -136,6 +136,7 @@ h2 {
   .left-side {
     width: 100%;
     margin: 0;
+    padding: 1rem;
   }
 
   .left-side {
@@ -153,6 +154,6 @@ h2 {
   .d-flex {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
+    padding: 10px;
   }
 }

@@ -18,6 +18,18 @@ body {
   background-color: #ffffff;
 }
 
+.head {
+  margin: 1rem;
+}
+
+.percent {
+  margin: 1rem;
+}
+
+.why {
+  margin: 1rem;
+}
+
 .white p {
   margin-left: 2rem;
   color: rgb(0, 0, 0);
@@ -597,7 +609,7 @@ button {
   position: relative;
   overflow: hidden;
   width: 100%;
-  margin: 2rem ;
+  margin: 2rem;
 }
 
 .projects-slider {
@@ -945,6 +957,18 @@ button {
     text-align: center;
   }
 
+  .project {
+    display: none;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
   .white p {
     margin: 0.3rem 0;
   }
@@ -1026,6 +1050,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     margin: 1rem;
+    padding: 1rem;
   }
 
   .photo,
@@ -1042,6 +1067,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     margin-bottom: 2rem;
+    padding: 1rem;
   }
 
   .architect,
@@ -1052,26 +1078,30 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
   }
 
   .architect img {
     height: auto;
   }
+
   .architect .slide {
     width: 768px !important;
     height: 100%;
     float: left;
-}
+  }
 
   .architect .slide img {
     width: 100% !important;
     height: auto;
     object-fit: contain;
   }
-  .architect .slider{
+
+  .architect .slider {
     width: 100% !important;
   }
-  .phone{
+
+  .phone {
     display: none !important;
   }
 
@@ -1084,6 +1114,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
+    padding: 1rem;
   }
 
   .win {
@@ -1175,6 +1206,7 @@ button {
   .secondaly,
   .thridly {
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
   .apartment ul {
@@ -1191,6 +1223,7 @@ button {
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding: 1rem;
   }
 
   .hash {
@@ -1284,6 +1317,7 @@ button {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+    padding: 1rem;
   }
 
   #nav-menu {
@@ -1321,6 +1355,7 @@ button {
     grid-template-columns: 1fr;
     place-items: center;
     width: 100%;
+    padding: 1rem;
   }
 
   .container {
@@ -1951,10 +1986,11 @@ body {
   .container {
     width: 100% !important;
   }
-  .architect{
+
+  .architect {
     width: 100% !important;
   }
-  
+
 
   .insights-grid {
     grid-template-columns: 1fr;
@@ -1981,12 +2017,13 @@ body {
 }
 
 @media (min-width: 640px) {
-    .container {
-        max-width: 100% !important; 
-    }
-    .architect{
+  .container {
+    max-width: 100% !important;
+  }
+
+  .architect {
     width: 100% !important;
   }
-  
-    
+
+
 }
