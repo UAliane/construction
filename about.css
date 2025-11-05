@@ -62,7 +62,7 @@ body {
 
 .hero .subtitle {
   font-size: 1.5rem;
-  margin-bottom: 15px;
+  margin-top: 4rem;
 }
 
 .hero .desc {
@@ -218,9 +218,10 @@ body {
   color: #000000;
   background-color: #fff;
 }
+
 .prev,
 .next {
- 
+
   display: none !important;
 }
 
@@ -458,6 +459,15 @@ body {
     margin: 0;
   }
 
+  .overview-grid {
+    padding: 1rem;
+  }
+
+  .last  {
+    margin-top: 0;
+    padding: 0;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
@@ -470,25 +480,32 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-        padding: 0;
+    padding: 0;
     margin-bottom: 2rem;
   }
+
   .innovation img {
     height: 24rem !important;
     width: 100%;
     object-fit: cover;
-}
-.image-container {
+  }
+
+  .image-container {
     position: relative;
     width: 22rem;
+  }
+  .tooltip {
+    height: 24rem;
 }
-.location {
+
+  .location {
     background: #f9fafb;
-     padding: 40px 0px; 
-}
-.innovation {
+    padding: 40px 0px 0px 0px;
+  }
+
+  .innovation {
     margin: 0;
-}
+  }
 
   .mission {
     display: grid;
@@ -500,21 +517,22 @@ body {
   .location .grid {
     display: grid;
     grid-template-columns: 1fr;
-   
+
   }
 
   .why {
     display: none;
     grid-template-columns: 1fr;
-   
+
   }
 
   .center {
     display: grid;
     grid-template-columns: 1fr;
     padding: 0;
-    
+
   }
+
   .timely {
     height: 12rem;
     width: 100%;
@@ -522,26 +540,26 @@ body {
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 0;
-}
+  }
 
   .innovation {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-  
+
   }
 
   .staff {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-  
+
   }
 
   .values .grid,
   .stats .grid {
     grid-template-columns: 1fr;
-   
+
   }
 
   .creating {
