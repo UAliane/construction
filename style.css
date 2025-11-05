@@ -1001,7 +1001,7 @@ button {
   /* Navbar */
   .blue {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     height: auto;
     padding: 1rem 0;
     text-align: center;
