@@ -1116,10 +1116,14 @@ button {
   .pink {
     display: grid;
     grid-column: none;
-    padding: 1rem;
+    padding: 0px 1rem;
     margin: 0;
     width: 100%;
   }
+.pink  button {
+    margin: 2rem 0px 0px 0px;
+    
+}
 
   .architect img {
     height: auto;
