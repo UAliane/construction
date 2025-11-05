@@ -218,6 +218,11 @@ body {
   color: #000000;
   background-color: #fff;
 }
+.prev,
+.next {
+ 
+  display: none !important;
+}
 
 .why h1 {
   font-size: 3rem;
@@ -450,6 +455,7 @@ body {
 @media (max-width: 768px) {
   .hero {
     height: 70vh;
+    margin: 0;
   }
 
   .hero h1 {
@@ -464,52 +470,78 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-    padding: 1rem;
+        padding: 0;
+    margin-bottom: 2rem;
   }
+  .innovation img {
+    height: 24rem !important;
+    width: 100%;
+    object-fit: cover;
+}
+.image-container {
+    position: relative;
+    width: 22rem;
+}
+.location {
+    background: #f9fafb;
+     padding: 40px 0px; 
+}
+.innovation {
+    margin: 0;
+}
 
   .mission {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-    padding: 1rem;
+
   }
 
   .location .grid {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 1rem;
+   
   }
 
   .why {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr;
-    padding: 1rem;
+   
   }
 
   .center {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 1rem;
+    padding: 0;
+    
   }
+  .timely {
+    height: 12rem;
+    width: 100%;
+    background-color: #fde68a;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
 
   .innovation {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-    padding: 1rem;
+  
   }
 
   .staff {
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
-    padding: 1rem;
+  
   }
 
   .values .grid,
   .stats .grid {
     grid-template-columns: 1fr;
-    padding: 1rem;
+   
   }
 
   .creating {

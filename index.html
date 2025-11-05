@@ -327,68 +327,73 @@
             <h1>PROJECT EIGHT</h1>
           </div>
         </div>
-        <button class="prev"><
-          </button>
+        <button class="prev">
+          < </button>
             <button class="next">></button>
       </div>
       <button>See More Projects</button>
     </div>
     <footer>
-    <div class="last">
-      <div class="media">
-        <img
-          src="https://res.cloudinary.com/dbtchmsoy/image/upload/v1757926236/WhatsApp_Image_2025-09-15_at_10.14.08_AM_foul42.jpg"
-          alt="" />
-        <div class="name">
-          <a href="https://www.facebook.com/profile.php?id=61554994890140"><i class='bx bxl-facebook' style='color:#ffffff'></i></a>
-          <a href="https://www.tiktok.com/@hashhivecontractors?_t=ZM-90Jk8hQVCNk&_r=1"><i class='bx bxl-tiktok' style='color:#ffffff'></i></a>
-          <a href="https://www.instagram.com/hash_hive_contractors_?igsh=MXJkYTBhaXJldXh1OQ%3D%3D&utm_source=qr"><i class='bx bxl-instagram' style='color:#ffffff'></i></a>
-          <a href=""><i class='bx bxl-linkedin-square' style='color:#ffffff'></i></a>
+      <div class="last">
+        <div class="media">
+          <img
+            src="https://res.cloudinary.com/dbtchmsoy/image/upload/v1757926236/WhatsApp_Image_2025-09-15_at_10.14.08_AM_foul42.jpg"
+            alt="" />
+          <div class="name">
+            <a href="https://www.facebook.com/profile.php?id=61554994890140"><i class='bx bxl-facebook'
+                style='color:#ffffff'></i></a>
+            <a href="https://www.tiktok.com/@hashhivecontractors?_t=ZM-90Jk8hQVCNk&_r=1"><i class='bx bxl-tiktok'
+                style='color:#ffffff'></i></a>
+            <a href="https://www.instagram.com/hash_hive_contractors_?igsh=MXJkYTBhaXJldXh1OQ%3D%3D&utm_source=qr"><i
+                class='bx bxl-instagram' style='color:#ffffff'></i></a>
+            <a href=""><i class='bx bxl-linkedin-square' style='color:#ffffff'></i></a>
+          </div>
+        </div>
+        <div class="service">
+
+          <div class="new">
+            <h1>SUBSCRIBE NEWS LETTER</h1>
+            <p>We invite you to register to read the<br>
+              latest news, offers and events about our<br>
+              company.
+            </p>
+            <input type="email" id="email" name="email" placeholder="Email Adress..." required>
+            <button type="submit">Submit</button>
+            <p>No worries, we don’t spam your inbox.</p>
+          </div>
+
+          <div class="contact">
+            <h1>CONTACT US</h1>
+            <div class="changee">
+              <p class="nooo">Rwanda ,Kigali</p>
+              <p>nfo@hivecontractors</p>
+              <p>+250 788435371</p>
+              <p class="nooo">+250 783092163</p>
+            </div>
+            <p>Working Hours: Mon – Fri: 8.00AM – 5.00PM</p>
+          </div>
+          <div class="project">
+            <h1>OUR PROJECTS</h1>
+            <p>All Projects</p>
+            <p>Residential</p>
+            <p>Education</p>
+            <p>Public</p>
+          </div>
+          <div class="link">
+            <h1 class="nooo">LINKS</h1>
+            <P><a href="index.html">Home</a></P>
+            <P><a href="services.html">Our Services</a></P>
+            <P><a href="projects.html">Our Projects</a></P>
+            <P><a href="insights.html">Insights</a></P>
+            <P><a href="contact.html">Contact</a></P>
+          </div>
+        </div>
+        <div class="copy">
+          <p>Copyright © 2025 Hashhive Contractor. All Rights Reserved.</p>
         </div>
       </div>
-      <div class="service">
 
-        <div class="new">
-          <h1>SUBSCRIBE NEWS LETTER</h1>
-          <p>We invite you to register to read the<br>
-            latest news, offers and events about our<br>
-            company.
-          </p>
-          <input type="email" id="email" name="email" placeholder="Email Adress..." required>
-          <button type="submit">Submit</button>
-          <p>No worries, we don’t spam your inbox.</p>
-        </div>
-
-        <div class="contact">
-          <h1>CONTACT US</h1>
-          <p>Rwanda ,Kigali</p>
-          <p>nfo@hivecontractors</p>
-          <p>+250 788435371</p>
-          <p>+250 783092163</p>
-          <p>Working Hours: Mon – Fri: 8.00AM – 5.00PM</p>
-        </div>
-        <div class="project">
-          <h1>OUR PROJECTS</h1>
-          <p>All Projects</p>
-          <p>Residential</p>
-          <p>Education</p>
-          <p>Public</p>
-        </div>
-        <div class="link">
-          <h1>LINKS</h1>
-          <P><a href="index.html">Home</a></P>
-          <P><a href="services.html">Our Services</a></P>
-          <P><a href="projects.html">Our Projects</a></P>
-          <P><a href="insights.html">Insights</a></P>
-          <P><a href="contact.html">Contact</a></P>
-        </div>
-      </div>
-      <div class="copy">
-        <p>Copyright © 2025 Hashhive Contractor. All Rights Reserved.</p>
-      </div>
-    </div>
-
-  </footer>
+    </footer>
 
 
     <!-- Floating Button -->
@@ -424,15 +429,15 @@
         let autoSlide;
 
         function updateSlide() {
-  // Check if screen width is greater than 768px (you can adjust this breakpoint)
-  if (window.innerWidth > 768) {
-    // Run the slide animation only on big screens
-    slider.style.transform = `translateX(-${current * 25}%)`;
-  } else {
-    // On small screens (like phones), stop the slider from moving
-    slider.style.transform = `translateX(0)`;
-  }
-}
+          // Check if screen width is greater than 768px (you can adjust this breakpoint)
+          if (window.innerWidth > 768) {
+            // Run the slide animation only on big screens
+            slider.style.transform = `translateX(-${current * 25}%)`;
+          } else {
+            // On small screens (like phones), stop the slider from moving
+            slider.style.transform = `translateX(0)`;
+          }
+        }
 
 
         function nextSlide() {
