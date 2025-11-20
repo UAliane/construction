@@ -61,10 +61,10 @@
                 src="https://res.cloudinary.com/dspsj31q8/image/upload/v1759137293/WhatsApp_Image_2025-09-25_at_09.47.59_x8my5f.jpg"
                 alt="Urban Architecture Model"></div>
             <div class="slide"><img
-                src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758823774/WhatsApp_Image_2025-09-25_at_10.02.45_kaqysr.jpg"
+                src="https://res.cloudinary.com/dspsj31q8/image/upload/v1763641289/914027ac-561e-4642-a7dc-1d5986571077_uixuah.jpg"
                 alt="Urban Architecture Model"></div>
             <div class="slide"><img
-                src="https://res.cloudinary.com/dspsj31q8/image/upload/v1758823773/WhatsApp_Image_2025-09-25_at_09.47.59_ssl4j0.jpg"
+                src="https://res.cloudinary.com/dspsj31q8/image/upload/v1763641289/ba4471bc-bdaa-4472-8890-cda531de4307_nqv4xu.jpg"
                 alt="Urban Architecture Model"></div>
           </div>
           <button class="prev"><</button>
@@ -329,7 +329,66 @@
       document.getElementById("nav-menu").classList.toggle("active");
     }
 
+ // Slider functionality
+    document.querySelectorAll('.slider').forEach(slider => {
+      const slides = slider.querySelectorAll('.slide');
+      const slideCount = slides.length;
+      const slideWidth = 100 / slideCount;
+      let current = 0;
+      let autoSlide;
 
+      function updateSlide() {
+        slider.style.transform = `translateX(-${current * slideWidth}%)`;
+      }
+
+      function nextSlide() {
+        current = (current + 1) % slideCount;
+        updateSlide();
+      }
+
+      function prevSlide() {
+        current = (current - 1 + slideCount) % slideCount;
+        updateSlide();
+      }
+
+      // Auto-slide on desktop
+      if (window.innerWidth > 768) {
+        autoSlide = setInterval(nextSlide, 7000);
+      }
+
+      // Button controls
+      const prevBtn = slider.parentElement.querySelector('.prev');
+      const nextBtn = slider.parentElement.querySelector('.next');
+      if (prevBtn && nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          if (autoSlide) clearInterval(autoSlide);
+        });
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          if (autoSlide) clearInterval(autoSlide);
+        });
+      }
+
+      // Touch controls for mobile
+      let startX = 0;
+      let endX = 0;
+
+      slider.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+      });
+
+      slider.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) {
+          nextSlide();
+          if (autoSlide) clearInterval(autoSlide);
+        } else if (endX - startX > 50) {
+          prevSlide();
+          if (autoSlide) clearInterval(autoSlide);
+        }
+      });
+    });
     let currentSlide = 0;
     let isScrolling = false;
 
