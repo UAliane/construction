@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hashhive Contractor</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+    /* Basic reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:#f7f8fb; color:#111; line-height:1.4; }
+
+    /* Layout */
+    .container { max-width:1000px; margin:28px auto; padding:20px; background:white; border-radius:12px; box-shadow: 0 6px 24px rgba(6,10,22,.06); }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px; }
+    .brand { display:flex; gap:12px; align-items:center; }
+    .logo { width:54px; height:54px; border-radius:8px; background:linear-gradient(135deg,#ffb703,#fb8500); display:flex; align-items:center; justify-content:center; font-weight:700; color:white; font-size:20px; }
+    .title { font-size:18px; font-weight:700; }
+    .subtitle { font-size:13px; color:#4b5563; }
+
+    /* Nav tabs */
+    nav { display:flex; gap:8px; }
+    .tab { padding:8px 14px; border-radius:8px; cursor:pointer; font-weight:600; color:#374151; background:transparent; border:1px solid transparent; }
+    .tab.active { background:#06152f; color:#fff; border-color:rgba(6,21,47,.08); }
+
+    /* Page sections */
+    .page { display:none; padding:18px 0; }
+    .page.active { display:block; }
+
+    /* Overview card */
+    .summary { display:flex; gap:18px; align-items:center; margin-bottom:18px; }
+    .project-card { flex:1; padding:16px; border-radius:10px; background:linear-gradient(180deg,#fff,#fbfbfe); box-shadow: 0 4px 20px rgba(2,6,23,.04); border:1px solid #eef2ff; }
+    .project-meta { display:flex; gap:12px; flex-wrap:wrap; }
+    .badge { background:#fef3c7; color:#92400e; padding:6px 10px; border-radius:999px; font-weight:700; font-size:13px; }
+    .progress-wrap { width:280px; min-width:200px; }
+
+    .progress { height:14px; background:#e6eefc; border-radius:999px; overflow:hidden; margin-top:10px; }
+    .progress > i { display:block; height:100%; background: linear-gradient(90deg,#06b6d4,#0ea5e9); border-radius:999px; width:0%; transition:width .6s ease-in-out; }
+
+    /* Buttons */
+    .btn { display:inline-block; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:700; border: none; }
+    .btn.primary { background:#06152f; color:#fff; }
+    .btn.light { background:#f3f4f6; color:#111; border:1px solid #e6e9f2; }
+
+    /* Updates list */
+    .updates-list { margin-top:8px; display:flex; flex-direction:column; gap:12px; }
+    .update-card { display:flex; gap:12px; align-items:flex-start; padding:12px; border-radius:10px; border:1px solid #eef2ff; background:white; }
+    .thumb { width:120px; height:80px; border-radius:8px; background:#eef2ff; overflow:hidden; display:flex; align-items:center; justify-content:center; color:#9ca3af; font-size:12px; }
+    .u-content { flex:1; }
+    .u-date { font-size:12px; color:#6b7280; margin-bottom:6px; }
+    .u-title { font-weight:700; margin-bottom:6px; }
+    .u-text { color:#374151; font-size:14px; }
+
+    /* Documents */
+    .doc-list { display:flex; flex-direction:column; gap:10px; margin-top:12px; }
+    .doc-item { display:flex; justify-content:space-between; align-items:center; padding:10px; border-radius:8px; background:#fbfdff; border:1px solid #eef6ff; }
+    .doc-meta { display:flex; gap:12px; align-items:center; }
+    .doc-name { font-weight:700; }
+    .doc-actions { display:flex; gap:8px; }
+
+    /* Chat floating */
+    .chat-btn { position:fixed; right:20px; bottom:20px; background:#06b6d4; color:white; border-radius:50px; padding:12px 16px; box-shadow: 0 8px 30px rgba(3,7,18,.18); cursor:pointer; font-weight:700; }
+
+    /* Small screens */
+    @media (max-width:700px) {
+      .summary { flex-direction:column; }
+      .progress-wrap { width:100%; }
+      .thumb { width:90px; height:68px; }
+    }
+  </style>
+</head>
+<body>
+    <div class="navbar">
+    <div class="blue">
+      <div class="logo">
+        <img
+          src="https://res.cloudinary.com/dbtchmsoy/image/upload/v1757926236/WhatsApp_Image_2025-09-15_at_10.14.08_AM_foul42.jpg"
+          alt="" />
+      </div>
+
+      <!-- Hamburger Button -->
+      <div class="hamburger" onclick="toggleMenu()">
+        ☰
+      </div>
+
+      <div class="navigation" id="nav-menu">
+        <ul>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our service</a>
+          <a href="workers.html">Our worker</a>
+          <a href="insights.html">Insights</a>
+          <a href="contact.html">Contact us</a>
+        </ul>
+      </div>
+
+      <input type="search" class="input" placeholder="search here ...">
+    </div>
+
+  </div>
+  <div class="container" role="main" aria-labelledby="main-title">
+    <header>
+      <div class="brand">
+        <div class="logo">HH</div>
+        <div>
+          <div class="title" id="main-title">Hash Hive – Project Dashboard</div>
+          <div class="subtitle">Follow daily progress — secure, simple, transparent</div>
+        </div>
+      </div>
+
+      <nav aria-label="Primary">
+        <div class="tab active" data-page="overview">My Project Overview</div>
+        <div class="tab" data-page="updates">Daily Updates</div>
+        <div class="tab" data-page="documents">Project Documents</div>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <section id="overview" class="page active" aria-hidden="false">
+      <div class="summary">
+        <div class="project-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <div style="font-size:15px;font-weight:800" id="project-name">Modern 3-Bedroom Villa</div>
+              <div style="font-size:13px;color:#6b7280;margin-top:6px;" id="project-location">Kigali, Rwanda</div>
+            </div>
+            <div style="text-align:right;">
+              <div class="badge" id="stage-badge">Structural Works</div>
+              <div style="font-size:12px;color:#6b7280;margin-top:6px;">Expected finish: <strong id="expected-date">2026-03-15</strong></div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-size:13px;color:#374151;">Progress</div>
+              <div style="font-size:13px;color:#374151;font-weight:700;" id="progress-percent">45%</div>
+            </div>
+
+            <div class="progress-wrap">
+              <div class="progress" aria-hidden="true">
+                <i id="progress-bar" style="width:45%"></i>
+              </div>
+            </div>
+
+            <div style="margin-top:12px;display:flex;gap:8px;">
+              <button class="btn primary" id="view-updates-btn">View Updates</button>
+              <button class="btn light" id="view-docs-btn">View Documents</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="width:260px;">
+          <div style="padding:16px;border-radius:10px;background:linear-gradient(180deg,#fff,#fcfeff);border:1px solid #eef6ff;">
+            <div style="font-size:13px;color:#6b7280;">Project Manager</div>
+            <div style="font-weight:800;margin-top:6px;">Hashim </div>
+            <div style="font-size:13px;color:#6b7280;margin-top:8px;">+250 788 435 371</div>
+
+            <div style="margin-top:14px;">
+              <button class="btn primary" style="width:100%;" id="contact-btn">Message PM</button>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;padding:12px;border-radius:10px;background:#fff;border:1px solid #f0f6ff;font-size:13px;">
+            <div style="font-weight:700;">Current Stage</div>
+            <div style="color:#6b7280;margin-top:6px;">Foundation ✔ — Structure in progress — Next: Formwork for beams</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <h3 style="margin-bottom:8px;">Quick actions</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <button class="btn light" id="download-report">Download weekly report</button>
+          <button class="btn light" id="pay-invoice">Make Payment</button>
+          <button class="btn light" id="request-change">Request design change</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- UPDATES PAGE -->
+    <section id="updates" class="page" aria-hidden="true">
+      <h3 style="margin-bottom:10px;">Daily Updates</h3>
+      <div class="updates-list" id="updates-list">
+        <!-- update cards inserted by JS -->
+      </div>
+    </section>
+
+    <!-- DOCUMENTS PAGE -->
+    <section id="documents" class="page" aria-hidden="true">
+      <h3 style="margin-bottom:10px;">Project Documents</h3>
+      <div class="doc-list" id="doc-list">
+        <!-- doc items inserted by JS -->
+      </div>
+      <div style="margin-top:12px;color:#6b7280;font-size:13px;">Note: Some documents are premium — contact PM to unlock downloads.</div>
+    </section>
+
+    <!-- Footer small -->
+    <footer style="margin-top:18px;font-size:13px;color:#6b7280;text-align:center;">Hash Hive Contractors Ltd — Secure project updates</footer>
+  </div>
+
+  <!-- Floating chat -->
+  <div class="chat-btn" id="chat" aria-live="polite">Chat PM</div>
+
+  <script>
+    /*******************
+     * Simple client-side dashboard demo
+     * - All data here are demo/mock
+     * - Replace fetchMockData() with real API calls
+     *   e.g., fetch('/api/project/123')...
+     *******************/
+
+    const mockData = {
+      project: {
+        id: "proj-0001",
+        name: "Modern 3-Bedroom Villa",
+        location: "Kigali, Rwanda",
+        stage: "Structural Works",
+        progressPercent: 45,
+        expectedFinish: "2026-03-15",
+        manager: { name: "Hashim", phone: "+250788435371" }
+      },
+      updates: [
+        { date: "2025-11-19", title: "Ground floor columns completed", text:"Completed ground floor columns and set rebar for beams. Tomorrow: start formwork.", photos:["https://picsum.photos/seed/1/400/300"] },
+        { date: "2025-11-18", title: "Foundation waterproofing", text:"We applied waterproofing layers to foundation walls.", photos:["https://picsum.photos/seed/2/400/300"] },
+        { date: "2025-11-15", title: "Excavation & footing", text:"Site excavation completed and footing casting started.", photos:["https://picsum.photos/seed/3/400/300"] }
+      ],
+      documents: [
+        { id:"d1", name:"Architecture Drawing - Ground Floor.pdf", file:"/files/arch_groundfloor.pdf", size:"1.2MB", premium:false },
+        { id:"d2", name:"Bill of Quantities (BoQ).pdf", file:"/files/boq.pdf", size:"600KB", premium:true },
+        { id:"d3", name:"Permit - District.pdf", file:"/files/permit.pdf", size:"200KB", premium:false },
+      ]
+    };
+
+    // UI helpers
+    function $(s) { return document.querySelector(s); }
+    function $all(s) { return Array.from(document.querySelectorAll(s)); }
+
+    // Navigation
+    $all('.tab').forEach(t => {
+      t.addEventListener('click', () => {
+        $all('.tab').forEach(x=>x.classList.remove('active'));
+        t.classList.add('active');
+        const page = t.dataset.page;
+        $all('.page').forEach(p => {
+          if (p.id === page) { p.classList.add('active'); p.setAttribute('aria-hidden','false'); }
+          else { p.classList.remove('active'); p.setAttribute('aria-hidden','true'); }
+        });
+      });
+    });
+
+    // Buttons quick nav
+    $('#view-updates-btn').addEventListener('click', () => document.querySelector('[data-page="updates"]').click());
+    $('#view-docs-btn').addEventListener('click', () => document.querySelector('[data-page="documents"]').click());
+    $('#contact-btn').addEventListener('click', () => startChat());
+
+    // Chat action
+    function startChat() {
+      // In production, open WhatsApp or internal chat. For demo:
+      alert('Opening chat with Project Manager: ' + mockData.project.manager.name + ' — ' + mockData.project.manager.phone);
+      // Example: window.open('https://wa.me/250788435371');
+    }
+    $('#chat').addEventListener('click', startChat);
+
+    // Demo: download / premium handling
+    function onDownloadDoc(doc) {
+      if (doc.premium) {
+        // prompt pay or request unlock
+        const ok = confirm('This document is premium. Pay $50 to unlock and download? (Demo prompt)');
+        if (ok) {
+          // TODO: call payment API -> on success unlock -> download
+          alert('Thank you! (Demo) Document unlocked — starting download...');
+          // simulate download:
+          window.location.href = doc.file;
+        }
+      } else {
+        // direct download
+        window.location.href = doc.file;
+      }
+    }
+
+    // Render functions
+    function renderProject(project) {
+      $('#project-name').textContent = project.name;
+      $('#project-location').textContent = project.location;
+      $('#stage-badge').textContent = project.stage;
+      $('#expected-date').textContent = project.expectedFinish;
+      $('#progress-percent').textContent = project.progressPercent + '%';
+      $('#progress-bar').style.width = project.progressPercent + '%';
+    }
+
+    function renderUpdates(updates) {
+      const list = $('#updates-list');
+      list.innerHTML = '';
+      updates.forEach(u => {
+        const card = document.createElement('article');
+        card.className = 'update-card';
+        card.innerHTML = `
+          <div class="thumb"><img src="${u.photos && u.photos[0] ? u.photos[0] : 'https://picsum.photos/400/300'}" alt="" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="u-content">
+            <div class="u-date">${u.date}</div>
+            <div class="u-title">${u.title}</div>
+            <div class="u-text">${u.text}</div>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    function renderDocs(docs) {
+      const list = $('#doc-list');
+      list.innerHTML = '';
+      docs.forEach(d => {
+        const item = document.createElement('div');
+        item.className = 'doc-item';
+        item.innerHTML = `
+          <div class="doc-meta">
+            <div style="width:44px;height:44px;border-radius:8px;background:#fff;border:1px solid #eef2ff;display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b2b3a">PDF</div>
+            <div>
+              <div class="doc-name">${d.name}</div>
+              <div style="font-size:13px;color:#6b7280">${d.size} ${d.premium? ' · Premium' : ''}</div>
+            </div>
+          </div>
+          <div class="doc-actions">
+            <button class="btn light" onclick='onDownloadDoc(${JSON.stringify(d).replace(/'/g,"\\'")})'>Download</button>
+            <a class="btn primary" href="#" onclick="event.preventDefault(); alert('Request to start construction sent (demo).')">Start Build</a>
+          </div>
+        `;
+        list.appendChild(item);
+      });
+    }
+
+    // Initialization - replace this with fetch to real API
+    function fetchMockData() {
+      // Simulate delay
+      setTimeout(() => {
+        renderProject(mockData.project);
+        renderUpdates(mockData.updates);
+        renderDocs(mockData.documents);
+      }, 300);
+    }
+
+    // Call init
+    fetchMockData();
+
+    // Example developer notes for integrating with backend:
+    // - Replace fetchMockData() with fetch('/api/project/:id') and fetch('/api/project/:id/updates')
+    // - Ensure endpoints return JSON with same shapes used above.
+    // - Secure downloads: /api/documents/:docId?token=... and verify user owns project.
+    // - Payment flow: call payments API (Stripe, PayPal, or Mobile Money) and unlock premium docs server-side.
+    // - Real-time updates can use web sockets or polling for automatic new updates.
+  </script>
+</body>
+</html>
